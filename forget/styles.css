@@ -1,0 +1,140 @@
+/* Custom Styles */
+body {
+  font-family: 'Roboto', sans-serif;
+  background: linear-gradient(135deg, #698de1, #298ac7);
+  color: #fff;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.forgot-password-container {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border-radius: 12px;
+  padding: 2rem;
+  width: 90%;
+  max-width: 400px;
+  text-align: center;
+  animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+h2 {
+  margin-bottom: 1.5rem;
+  color: #fff;
+}
+
+/* Input Field */
+.input-group {
+  margin-bottom: 1.5rem;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+}
+
+.input-group input:focus {
+  border-color: #ff6f61;
+  outline: none;
+}
+
+.input-group input::placeholder {
+  color: rgba(255, 255, 255, 0.7);
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.input-group input:focus::placeholder {
+  transform: translateY(-100%);
+  opacity: 0;
+}
+
+/* Reset Button */
+.reset-button {
+  width: 100%;
+  padding: 0.75rem;
+  background: #ff6f61;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.reset-button:hover {
+  background: #ff4a3d;
+}
+
+.reset-button:active {
+  transform: scale(0.95);
+}
+
+/* Back to Login Link */
+.back-to-login {
+  margin-top: 1.5rem;
+}
+
+.back-to-login a {
+  color: #ff6f61;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.back-to-login a:hover {
+  color: #ff4a3d;
+}
+
+/* Error Messages */
+.error-message {
+  color: red;
+  font-size: 0.875rem;
+  margin-top: 0.5rem;
+  animation: shake 0.5s ease-in-out;
+}
+
+/* Password Strength Indicator */
+.password-strength {
+  display: flex;
+  gap: 4px;
+  margin-top: 0.5rem;
+}
+
+.strength-bar {
+  flex: 1;
+  height: 4px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 2px;
+  transition: background-color 0.3s ease;
+}
+
+/* Success Message */
+.success-message {
+  color: #2ecc71;
+  background-color: rgba(46, 204, 113, 0.2);
+  padding: 0.75rem;
+  border-radius: 8px;
+  margin-top: 1rem;
+  display: none;
+}
+
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  25% { transform: translateX(-10px); }
+  50% { transform: translateX(10px); }
+  75% { transform: translateX(-10px); }
+}
